@@ -1,7 +1,37 @@
-brightcove_dynamic_ingest.bc_dynamic_ingest_form:
-  path: '/brightcove_dynamic_ingest/form/bc_dynamic_ingest'
+brightcove_dynamic_ingest.add_form:
+  path: '/brightcove_dynamic_ingest/add'
   defaults:
     _form: '\Drupal\brightcove_dynamic_ingest\Form\BcDynamicIngestForm'
-    _title: 'BcDynamicIngestForm'
+    _title: 'MGC Form'
   requirements:
-    _access: 'TRUE'
+    _permission: 'brightcove dynamic ingest'
+  options:
+    _admin_route: TRUE
+    no_cache: 'TRUE'
+brightcove_dynamic_ingest.get_token:
+  path: '/brightcove_dynamic_ingest/get-token'
+  defaults:
+    _controller: '\Drupal\brightcove_dynamic_ingest\Controller\BcDynamicIngestController::getOauthToken'
+    _title: 'Brightcove OAuth Token'
+  requirements:
+    _permission: 'brightcove dynamic ingest'
+  options:
+    no_cache: 'TRUE'
+brightcove_dynamic_ingest.finalize_upload:
+  path: '/brightcove_dynamic_ingest/finalize-upload'
+  defaults:
+    _controller: '\Drupal\brightcove_dynamic_ingest\Controller\BcDynamicIngestController::finalizeUpload'
+    _title: 'Brightcove Upload Finalize'
+  requirements:
+    _permission: 'brightcove dynamic ingest'
+  options:
+    no_cache: 'TRUE'
+brightcove_dynamic_ingest.get_thumbnail:
+  path: '/brightcove_dynamic_ingest/get-thumbnail'
+  defaults:
+    _controller: '\Drupal\brightcove_dynamic_ingest\Controller\BcDynamicIngestController::getThumbnail'
+    _title: 'Get uploaded thumbnail'
+  requirements:
+    _permission: 'brightcove dynamic ingest'
+  options:
+    no_cache: 'TRUE'

@@ -1,0 +1,5 @@
+brightcove_dynamic_ingest.add_form:
+  title: 'MGC Form'
+  route_name: brightcove_dynamic_ingest.add_form
+  parent: system.admin_content
+  weight: 99

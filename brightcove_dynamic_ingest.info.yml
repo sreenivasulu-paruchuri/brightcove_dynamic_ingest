@@ -1,7 +1,7 @@
 name: 'Brightcove Dynamic Ingest'
 type: module
-description: 'Makes possible to upload video and videos to brightcove wihtout storing it to server.'
+description: 'Brightcove Dynamic Ingest module provides a form to upload video directly to Brightcove bucket instead of Drupal file system.'
 core: 8.x
 package: 'Brightcove'
 dependencies:
-  - brightcove
+  - brightcove:brightcove
