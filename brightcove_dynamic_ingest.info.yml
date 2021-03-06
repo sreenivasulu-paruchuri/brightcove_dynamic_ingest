@@ -1,0 +1,7 @@
+name: 'Brightcove Dynamic Ingest'
+type: module
+description: 'Makes possible to upload video and videos to brightcove wihtout storing it to server.'
+core: 8.x
+package: 'Brightcove'
+dependencies:
+  - brightcove

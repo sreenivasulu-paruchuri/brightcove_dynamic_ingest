@@ -1,0 +1,7 @@
+brightcove_dynamic_ingest.bc_dynamic_ingest_form:
+  path: '/brightcove_dynamic_ingest/form/bc_dynamic_ingest'
+  defaults:
+    _form: '\Drupal\brightcove_dynamic_ingest\Form\BcDynamicIngestForm'
+    _title: 'BcDynamicIngestForm'
+  requirements:
+    _access: 'TRUE'

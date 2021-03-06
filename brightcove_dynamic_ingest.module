@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains brightcove_dynamic_ingest.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function brightcove_dynamic_ingest_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the brightcove_dynamic_ingest module.
+    case 'help.page.brightcove_dynamic_ingest':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Makes possible to upload video and videos to brightcove wihtout storing it to server.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
