@@ -1,3 +1,6 @@
+brightcove dynamic ingest config:
+  title: 'Brightcove Dynamic Ingest Config'
+  description: 'Allow access to Brightcove Dynamic Ingest configuration form'
 brightcove dynamic ingest:
   title: 'Brightcove Dynamic Ingest'
   description: 'Allow access to Brightcove Dynamic Ingest form'

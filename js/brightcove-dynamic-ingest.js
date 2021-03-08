@@ -44,18 +44,13 @@
       }
 
       function getTags() {
-        var $tags = settings.brightcoveDynamicIngest.noWatermark.tags;
-        if (typeof getFieldsValue('watermark') !== 'undefined') {
-          $tags = settings.brightcoveDynamicIngest.watermark.tags;
-        }
-        return $tags;
+        var $clientName = getFieldsValue('client');
+        return settings.brightcoveDynamicIngest.$clientName.tags;
       }
 
       function getApiUrl($urltype) {
-        var $accountId = settings.brightcoveDynamicIngest.noWatermark.accountId;
-        if (typeof getFieldsValue('watermark') !== 'undefined') {
-          $accountId = settings.brightcoveDynamicIngest.watermark.accountId;
-        }
+        var $clientName = getFieldsValue('client');
+        var $accountId = settings.brightcoveDynamicIngest.$clientName.accountId;
         switch ($urltype) {
           case 'cms':
             return 'https://cms.api.brightcove.com/v1/accounts/' + $accountId + '/videos/';

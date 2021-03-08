@@ -1,3 +1,10 @@
+brightcove_dynamic_ingest.config_form:
+  path: '/admin/config/media/brightcove-dynamic-ingest'
+  defaults:
+    _form: '\Drupal\brightcove_dynamic_ingest\Form\BcDynamicIngestConfigForm'
+    _title: 'Brightcove Dynamic Ingest Config'
+  requirements:
+    _permission: 'brightcove dynamic ingest config'
 brightcove_dynamic_ingest.add_form:
   path: '/brightcove-dynamic-ingest/add'
   defaults:

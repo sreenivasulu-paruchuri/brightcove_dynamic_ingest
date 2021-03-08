@@ -1,3 +1,9 @@
+brightcove_dynamic_ingest.config_form:
+  title: 'Brightcove Dynamic Ingest Config'
+  route_name: brightcove_dynamic_ingest.config_form
+  description: 'Brightcove Dynamic Ingest global settings and per client account settings.'
+  parent: system.admin_config_media
+  weight: 99
 brightcove_dynamic_ingest.add_form:
   title: 'Brightcove Dynamic Ingest'
   route_name: brightcove_dynamic_ingest.add_form
