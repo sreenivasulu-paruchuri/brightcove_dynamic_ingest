@@ -30,6 +30,8 @@
 
       function getFieldsValue($name) {
         switch ($name) {
+          case 'client':
+            return $($form).find("[name='api_client']:selected").val();
           case 'title':
             return $($form).find("[name='title']").val();
           case 'desc':
@@ -38,8 +40,6 @@
             return $($form).find("[name='files[video]']").get()[0].files[0];
           case 'image':
             return $($form).find("[name='thumbnail[fids]']").val();
-          case 'watermark':
-            return $($form).find("[name='watermark']:checked").val();
         }
       }
 
