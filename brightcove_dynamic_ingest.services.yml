@@ -1,0 +1,4 @@
+services:
+  brightcove_dynamic_ingest.service:
+    class: Drupal\brightcove_dynamic_ingest\Services\BcDynamicIngestService
+    arguments: ['@config.factory', '@entity_type.bundle.info', '@entity_type.manager']

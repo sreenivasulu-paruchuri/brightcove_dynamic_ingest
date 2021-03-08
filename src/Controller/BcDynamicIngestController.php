@@ -14,7 +14,7 @@ class BcDynamicIngestController extends ControllerBase {
   /**
    * Brightcove uploading log channel.
    */
-  const LOG_CHANNEL = 'brightcove video upload';
+  const LOG_CHANNEL = 'brightcove dynamic ingest';
 
   /**
    * Symfony\Component\HttpFoundation\RequestStack definition.
@@ -35,7 +35,7 @@ class BcDynamicIngestController extends ControllerBase {
   /**
    * Returns the access token of Brightcove.
    */
-  public function getOauthToken() {
+  public function getOauthToken(string $client_name = NULL) {
     $client = $this->getBrightcoveClientKeys();
     // Set up request for access token.
     $data          = [];

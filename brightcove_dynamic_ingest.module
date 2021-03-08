@@ -16,7 +16,7 @@ function brightcove_dynamic_ingest_help($route_name, RouteMatchInterface $route_
     case 'help.page.brightcove_dynamic_ingest':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Makes possible to upload video and videos to brightcove wihtout storing it to server.') . '</p>';
+      $output .= '<p>' . t('Brightcove Dynamic Ingest module provides a form to upload video directly to Brightcove bucket instead of Drupal file system.') . '</p>';
       return $output;
 
     default:

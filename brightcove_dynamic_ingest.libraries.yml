@@ -8,3 +8,13 @@ upload-files:
   dependencies:
     - core/jquery
     - core/drupalSettings
+with-local-aws-js:
+  css:
+    theme:
+      css/brightcove-dynamic-ingest.css: {}
+  js:
+    js/aws-sdk-2.842.0.min.js: {}
+    js/brightcove-dynamic-ingest.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

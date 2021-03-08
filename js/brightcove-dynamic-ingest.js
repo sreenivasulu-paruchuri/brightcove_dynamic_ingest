@@ -91,7 +91,7 @@
 
       function finalizeUpload($status, $location, $message = null) {
         $.ajax({
-          url: $baseUrl + 'brightcove_dynamic_ingest/finalize-upload',
+          url: $baseUrl + 'brightcove-dynamic-ingest/finalize-upload',
           method: 'POST',
           cache: false,
           async: false,
@@ -109,8 +109,11 @@
         var $functionName = 'getAuthToken';
         var $result = false;
         $.ajax({
-          url: $baseUrl + 'brightcove_dynamic_ingest/get-token',
+          url: $baseUrl + 'brightcove-dynamic-ingest/get-token',
+          method: 'POST',
+          cache: false,
           async: false,
+          data: {'client_name': 'default'},
           success: function (data) {
             if (isJSON(data) === false) {
               finalizeUpload('error', $functionName, data);
@@ -158,7 +161,7 @@
       function getThumbnailUrl($video, $uploadUrls, $fid) {
         var $functionName = 'getThumbnailUrl';
         $.ajax({
-          url: $baseUrl + 'brightcove_dynamic_ingest/get-thumbnail',
+          url: $baseUrl + 'brightcove-dynamic-ingest/get-thumbnail',
           method: 'POST',
           cache: false,
           async: false,
