@@ -166,7 +166,7 @@ class BcDynamicIngestController extends ControllerBase {
     if (!empty($request) && !empty($request->get('fid'))) {
       $fid = $request->get('fid');
       if (is_numeric($fid) && $file = $this->entityTypeManager()->getStorage('file')->load($fid)) {
-        $url = file_create_url($file->getFileUri());
+        $url = \Drupal::service('file_url_generator')->generateAbsoluteString($file->getFileUri());
         $this->getLogger(self::LOG_CHANNEL)->info($this->t('Function(API) called: @location<br>Image url: @fid (@url)', [
           '@location' => $request->get('location'),
           '@fid' => $fid,
